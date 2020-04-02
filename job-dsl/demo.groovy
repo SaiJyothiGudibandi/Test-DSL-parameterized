@@ -1,4 +1,4 @@
-pipelineJob('DSL_Demo') {
+pipelineJob('Test-DSL-parameterized-Jenkins') {
 
     def repo = 'https://github.com/SaiJyothiGudibandi/Test-sample-project-maven.git'
     triggers {
