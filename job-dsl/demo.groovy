@@ -10,7 +10,7 @@ pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
     definition {
         cpsScm {
             scm {
-                git(repo, 'master', { node -> node / 'extensions' << '' } )
+                git(${params.Git_URL}, ${params.Branch_Name}, { node -> node / 'extensions' << '' } )
             }
         }
     }
