@@ -12,7 +12,7 @@ pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
     definition {
         cpsScm {
           scm {
-            git(repo, 'master', { node -> node / 'extensions' << '' } )
+            git(repo, 'master', scriptPath('Jenkinsfile$testVarJob'){ node -> node / 'extensions' << '' } )
             }
         }
     }
