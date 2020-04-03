@@ -1,6 +1,6 @@
 pipelineJob('Test-DSL-parameterized-Jenkins') {
     parameters {
-        string(defaultValue: $testvar, description: 'Testing variable', name: 'testvar1')
+        string(defaultValue: "12345", description: 'Testing variable', name: 'testvar1')
     }
 
     def repo = 'https://github.com/SaiJyothiGudibandi/Test-sample-project-maven.git'
