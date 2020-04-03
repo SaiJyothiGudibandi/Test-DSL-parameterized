@@ -1,6 +1,6 @@
 pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
     parameters {
-        string(defaultValue: $testvar, description: 'What environment?', name: 'testVarJob')
+        string(defaultValue: ${params.$testvar}, description: 'Testing variable', name: 'testvar1')
     }
 
     def repo = 'https://github.com/SaiJyothiGudibandi/sample-project-maven.git'
