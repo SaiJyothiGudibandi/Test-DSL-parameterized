@@ -9,7 +9,7 @@ pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
     triggers {
         scm('*/15 * * * *')
     }
-    sh "echo ${params.testVarJob}"
+    sh "echo $testVarJob"
     definition {
         cpsScm {
             scm {
