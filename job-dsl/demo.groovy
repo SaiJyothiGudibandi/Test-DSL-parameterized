@@ -1,7 +1,6 @@
 pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
-
     parameters {
-        stringParam( "testVarJob", "Test-variable-value", "value1" )
+        string defaultValue: 'Test-value', description: 'creating a variable for testing purpose', name: 'testVarJob', trim: false
     }
 
 
@@ -9,7 +8,6 @@ pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
     triggers {
         scm('*/15 * * * *')
     }
-    sh "echo $testVarJob"
     definition {
         cpsScm {
             scm {
