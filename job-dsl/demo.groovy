@@ -1,4 +1,4 @@
-pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
+pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
     parameters {
         string(defaultValue: ${params.$testvar}, description: 'Testing variable', name: 'testvar1')
 	}
