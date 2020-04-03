@@ -1,4 +1,7 @@
-pipelineJob('DSL_Demo') {
+pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
+    parameters {
+        string(defaultValue: $testvar, description: 'What environment?', name: 'testVarJob')
+    }
 
     def repo = 'https://github.com/SaiJyothiGudibandi/sample-project-maven.git'
     triggers {
