@@ -1,4 +1,5 @@
-pipelineJob('Test-DSL-parameterized-Child-Pipeline-${env.BUILD_NUMBER}') {
+pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
+    displayName('Test-DSL-parameterized-Child-Pipeline-${env.BUILD_NUMBER}')
     parameters {
         stringParam('testVarJob', 'my default stringParam value', 'my description')
     }
