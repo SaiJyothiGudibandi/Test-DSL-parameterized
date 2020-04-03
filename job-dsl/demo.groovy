@@ -3,7 +3,7 @@ pipelineJob('Test-DSL-parameterized-Child-Pipeline') {
         stringParam('testVarJob', 'my default stringParam value', 'my description')
     }
 
-    def repo = ${params.Git_URL}
+    def repo = 'https://github.com/SaiJyothiGudibandi/Test-sample-project-maven.git'
     triggers {
         scm('*/15 * * * *')
     }
